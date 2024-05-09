@@ -36,4 +36,34 @@ router.post('/',async(req,res) => {
     }
 })
 
+
+// router.put('/:id', async (req, res) => {
+//     try {
+//         const { name, tech, sub } = req.body;
+//         const id = req.params.id;
+//         const updatedAlien = await Alien.findByIdAndUpdate(
+//             id,
+//             { name, tech, sub },
+//             { new: true } // Return the modified document
+//         );
+//         if (!updatedAlien) {
+//             return res.status(404).json({ message: "Not found that id" });
+//         }
+//         res.json(updatedAlien);
+//         console.log("One item is updated successfully")
+//     } catch (err) {
+//         res.status(500).json({ message: err.message });
+//     }
+// });
+
+// router.delete('/:id',async(req,res) => {
+//     try{
+//         await Alien.findByIdAndDelete(req.params.id)
+//         res.status(204).end()
+//         console.log("Succesfully one iten is deleted")
+//     }catch(err){
+//         res.send("Error")
+//     }
+//})
+
 module.exports = router
